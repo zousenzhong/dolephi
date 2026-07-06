@@ -1,0 +1,11 @@
+# Clean URL routing for news articles
+/news/*  /news.html  200
+
+# Redirect /news to news.html
+/news  /news.html  302
+
+# Redirect /admin to admin/index.html
+/admin  /admin/  302
+
+# 404 fallback: Cloudflare Pages automatically serves /404.html for not-found paths
+# No catch-all rule needed — having 404.html in root is sufficient

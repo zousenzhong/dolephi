@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Dolephi news and updates - product launches, factory news, trade shows, and industry insights.">
+<title>News & Updates | Dolephi</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+--blue:#3D8B5C;--blue-d:#256B43;--blue-l:#E6F4EA;--steel:#2C3E50;--gray:#5F6B7A;--gray-l:#F4F6F8;--amber:#B8860B;--amber-l:#FAF3E0;--line:#E2E6EA;--white:#fff;--green:#1D9E75;--green-l:#E1F5EE;--max:1200px
+}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;color:var(--steel);line-height:1.6;background:var(--white)}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;height:auto;display:block}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+
+/* Header */
+header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.hdr-in{display:flex;align-items:center;justify-content:space-between;height:64px;gap:12px}
+.logo{font-size:18px;font-weight:700;color:var(--blue);letter-spacing:-.5px;display:flex;align-items:center;gap:8px;white-space:nowrap}
+.logo svg{width:28px;height:28px;flex-shrink:0}
+.back-link{font-size:13px;color:var(--gray);font-weight:500;transition:color .2s}
+.back-link:hover{color:var(--blue)}
+
+/* News hero */
+.news-hero{background:linear-gradient(135deg,var(--blue-d) 0%,var(--blue) 100%);color:#fff;padding:60px 0 50px}
+.news-hero h1{font-size:32px;font-weight:700;letter-spacing:-.5px;margin-bottom:8px}
+.news-hero p{font-size:15px;opacity:.85}
+
+/* News list */
+.news-list-sec{padding:56px 0}
+.news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.news-card{border:1px solid var(--line);border-radius:12px;overflow:hidden;cursor:pointer;transition:box-shadow .2s,transform .2s;background:#fff}
+.news-card:hover{box-shadow:0 12px 32px rgba(0,0,0,.08);transform:translateY(-3px)}
+.news-card-img{aspect-ratio:16/9;background:linear-gradient(135deg,var(--blue-l),#D4ECDB);display:flex;align-items:center;justify-content:center}
+.news-card-img svg{width:40%;height:40%;opacity:.3}
+.news-card-body{padding:22px}
+.news-cat{display:inline-block;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;padding:3px 10px;border-radius:4px;margin-bottom:10px}
+.news-cat.company{background:var(--blue-l);color:var(--blue)}
+.news-cat.product{background:var(--green-l);color:var(--green)}
+.news-cat.show{background:var(--amber-l);color:var(--amber)}
+.news-cat.industry{background:#EEEDFE;color:#534AB7}
+.news-cat.cert{background:#FCEBEB;color:#A32D2D}
+.news-card-body h3{font-size:17px;font-weight:600;line-height:1.35;margin-bottom:8px;color:var(--steel)}
+.news-card-body p{font-size:13px;color:var(--gray);line-height:1.5;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.news-card-date{font-size:12px;color:var(--gray);margin-top:12px;font-weight:500}
+
+/* Article detail */
+.article-sec{padding:48px 0 64px;display:none}
+.article-back{display:inline-flex;align-items:center;gap:6px;font-size:14px;color:var(--gray);margin-bottom:24px;transition:color .2s;cursor:pointer}
+.article-back:hover{color:var(--blue)}
+.article-back svg{width:18px;height:18px}
+.article-header{margin-bottom:32px;border-bottom:1px solid var(--line);padding-bottom:24px}
+.article-header h1{font-size:30px;font-weight:700;letter-spacing:-.5px;line-height:1.25;margin-bottom:12px}
+.article-meta{display:flex;align-items:center;gap:14px;font-size:13px;color:var(--gray)}
+.article-meta .cat{display:inline-block;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;padding:3px 10px;border-radius:4px}
+.article-cover{width:100%;aspect-ratio:21/9;border-radius:12px;margin-bottom:32px;background:linear-gradient(135deg,var(--blue-l),#D4ECDB);display:flex;align-items:center;justify-content:center;overflow:hidden}
+.article-cover svg{width:30%;height:30%;opacity:.2}
+.article-body{font-size:16px;line-height:1.75;color:var(--steel);max-width:760px}
+.article-body h2{font-size:22px;font-weight:700;margin:28px 0 12px;color:var(--steel)}
+.article-body h3{font-size:18px;font-weight:600;margin:24px 0 8px}
+.article-body p{margin-bottom:16px}
+.article-body ul,.article-body ol{margin:0 0 16px 20px}
+.article-body li{margin-bottom:6px}
+.article-body blockquote{border-left:3px solid var(--blue);padding:12px 20px;background:var(--blue-l);border-radius:0 8px 8px 0;margin:20px 0;font-style:italic;color:var(--steel)}
+.article-body strong{font-weight:700;color:var(--steel)}
+
+/* Comments */
+.comments-sec{max-width:760px;margin-top:48px;padding-top:32px;border-top:1px solid var(--line)}
+.comments-sec h3{font-size:18px;font-weight:600;margin-bottom:20px;color:var(--steel)}
+.giscus-container{min-height:100px}
+
+/* Empty state */
+.empty-state{text-align:center;padding:80px 24px;color:var(--gray)}
+.empty-state svg{width:64px;height:64px;opacity:.2;margin:0 auto 16px}
+.empty-state h3{font-size:18px;font-weight:600;margin-bottom:8px;color:var(--steel)}
+.empty-state p{font-size:14px}
+
+/* Footer */
+footer{background:var(--blue-d);color:rgba(255,255,255,.7);padding:32px 0;text-align:center;font-size:13px}
+
+/* Responsive */
+@media(max-width:900px){
+.news-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:560px){
+.news-grid{grid-template-columns:1fr}
+.news-hero h1{font-size:24px}
+.article-header h1{font-size:22px}
+.article-body{font-size:15px}
+}
+</style>
+</head>
+<body>
+
+<header>
+<div class="wrap hdr-in">
+<a href="/" class="logo">
+<svg viewBox="0 0 32 32" fill="none"><rect x="4" y="3" width="24" height="26" rx="2" stroke="currentColor" stroke-width="2"/><path d="M16 3v26M4 16h24" stroke="currentColor" stroke-width="1.5"/><circle cx="16" cy="16" r="3" stroke="currentColor" stroke-width="1.5"/></svg>
+Dolephi<span style="color:var(--amber)">.</span>
+</a>
+<a href="/" class="back-link">&larr; Back to Home</a>
+</div>
+</header>
+
+<section class="news-hero">
+<div class="wrap">
+<h1 id="newsTitle">News &amp; Updates</h1>
+<p id="newsSubtitle">Product launches, company news, trade shows, and industry insights from Dolephi.</p>
+</div>
+</section>
+
+<!-- News List View -->
+<section class="news-list-sec" id="newsListSec">
+<div class="wrap">
+<div class="news-grid" id="newsGrid"></div>
+<div class="empty-state" id="emptyState" style="display:none">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>
+<h3>No articles yet</h3>
+<p>Check back soon for the latest updates.</p>
+</div>
+</div>
+</section>
+
+<!-- Article Detail View -->
+<section class="article-sec" id="articleSec">
+<div class="wrap">
+<span class="article-back" id="articleBack" onclick="showList()">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+Back to News
+</span>
+<div class="article-header">
+<div id="articleCat"></div>
+<h1 id="articleTitle"></h1>
+<div class="article-meta">
+<span id="articleDate"></span>
+</div>
+</div>
+<div class="article-cover" id="articleCover">
+<svg viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 12h18M12 3v18"/></svg>
+</div>
+<div class="article-body" id="articleBody"></div>
+<div class="comments-sec">
+<h3 id="commentsTitle">Comments &amp; Discussion</h3>
+<div class="giscus-container" id="giscusContainer"></div>
+</div>
+</div>
+</section>
+
+<footer>
+<div class="wrap">
+&copy; 2026 Dolephi Sanitary Ware Co., Ltd. All rights reserved. | Foshan, Guangdong, China
+</div>
+</footer>
+
+<!-- Marked.js for Markdown rendering -->
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<!-- Giscus for comments -->
+<script>
+var NEWS_MANIFEST = [
+{file:"content/news/2026-06-28-walk-in-nano-coating-launch.md",title:"Dolephi Launches New Premium Walk-In Enclosure Line with Easy-Clean Nano-Coating",date:"2026-06-28",category:"Product Launch",excerpt:"Our new walk-in enclosure series features hydrophobic nano-coating glass, reducing cleaning time by 80%. Available for OEM/ODM partners worldwide.",featured:true},
+{file:"content/news/2026-06-15-factory-expansion.md",title:"Dolephi Factory Expansion: New 15,000 m2 Production Facility Now Operational",date:"2026-06-15",category:"Company News",excerpt:"Our expanded facility increases annual capacity to 300,000+ units, with a dedicated tempering line and automated quality inspection system.",featured:true},
+{file:"content/news/2026-05-20-ish-frankfurt-2026.md",title:"Dolephi Showcases at ISH Frankfurt 2026 - Meeting Global B2B Partners",date:"2026-05-20",category:"Trade Show",excerpt:"Visit us at ISH Frankfurt 2026, Hall 4.2, Booth B-58. Discover our latest shower enclosure innovations and meet our engineering team.",featured:false}
+];
+
+var GISCUS_CONFIG = {
+repo: "your-github-username/dolephi-website",
+repoId: "",
+category: "News Comments",
+categoryId: ""
+};
+
+function catClass(cat){
+var c=cat.toLowerCase();
+if(c.indexOf('product')>=0)return 'product';
+if(c.indexOf('show')>=0||c.indexOf('trade')>=0)return 'show';
+if(c.indexOf('industr')>=0)return 'industry';
+if(c.indexOf('cert')>=0)return 'cert';
+return 'company';
+}
+
+function formatDate(d){
+var dt=new Date(d);
+var m=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+return m[dt.getMonth()]+' '+dt.getDate()+', '+dt.getFullYear();
+}
+
+function renderList(){
+var grid=document.getElementById('newsGrid');
+var sorted=NEWS_MANIFEST.slice().sort(function(a,b){return new Date(b.date)-new Date(a.date)});
+if(sorted.length===0){
+document.getElementById('emptyState').style.display='block';
+return;
+}
+var html='';
+sorted.forEach(function(n,i){
+html+='<div class="news-card" onclick="loadArticle(\''+i+'\')">';
+html+='<div class="news-card-img"><svg viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 12h18M12 3v18"/></svg></div>';
+html+='<div class="news-card-body">';
+html+='<span class="news-cat '+catClass(n.category)+'">'+n.category+'</span>';
+html+='<h3>'+n.title+'</h3>';
+html+='<p>'+n.excerpt+'</p>';
+html+='<div class="news-card-date">'+formatDate(n.date)+'</div>';
+html+='</div></div>';
+});
+grid.innerHTML=html;
+}
+
+function loadArticle(idx){
+var n=NEWS_MANIFEST[idx];
+document.getElementById('newsListSec').style.display='none';
+document.querySelector('.news-hero').style.display='none';
+document.getElementById('articleSec').style.display='block';
+window.scrollTo(0,0);
+
+document.getElementById('articleCat').innerHTML='<span class="news-cat '+catClass(n.category)+'">'+n.category+'</span>';
+document.getElementById('articleTitle').textContent=n.title;
+document.getElementById('articleDate').textContent=formatDate(n.date);
+
+fetch(n.file).then(function(r){return r.text()}).then(function(text){
+var body=text.replace(/^---[\s\S]*?---/,'').trim();
+document.getElementById('articleBody').innerHTML=marked.parse(body);
+}).catch(function(){
+document.getElementById('articleBody').innerHTML='<p>Article not found.</p>';
+});
+
+loadGiscus(n.file);
+}
+
+function showList(){
+document.getElementById('articleSec').style.display='none';
+document.querySelector('.news-hero').style.display='block';
+document.getElementById('newsListSec').style.display='block';
+window.scrollTo(0,0);
+}
+
+function loadGiscus(mapping){
+var container=document.getElementById('giscusContainer');
+container.innerHTML='';
+if(!GISCUS_CONFIG.repoId||!GISCUS_CONFIG.categoryId){
+container.innerHTML='<div style="padding:24px;background:var(--gray-l);border-radius:8px;font-size:13px;color:var(--gray);text-align:center">Comments are powered by Giscus (GitHub Discussions). Configure repoId and categoryId in news.html after setup. See README.md for instructions.</div>';
+return;
+}
+var s=document.createElement('script');
+s.src='https://giscus.app/client.js';
+s.setAttribute('data-repo',GISCUS_CONFIG.repo);
+s.setAttribute('data-repo-id',GISCUS_CONFIG.repoId);
+s.setAttribute('data-category',GISCUS_CONFIG.category);
+s.setAttribute('data-category-id',GISCUS_CONFIG.categoryId);
+s.setAttribute('data-mapping','specific');
+s.setAttribute('data-term',mapping);
+s.setAttribute('data-strict','0');
+s.setAttribute('data-reactions-enabled','1');
+s.setAttribute('data-emit-metadata','0');
+s.setAttribute('data-input-position','top');
+s.setAttribute('data-theme','light');
+s.setAttribute('data-lang','en');
+s.setAttribute('crossorigin','anonymous');
+s.async=true;
+container.appendChild(s);
+}
+
+document.getElementById('articleBack').addEventListener('click',function(e){e.preventDefault();showList()});
+
+renderList();
+</script>
+</body>
+</html>

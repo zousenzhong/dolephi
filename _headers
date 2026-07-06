@@ -1,0 +1,30 @@
+# Security headers for all pages
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=()
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com https://cdn.jsdelivr.net https://giscus.app; style-src 'self' 'unsafe-inline' https://giscus.app; img-src 'self' data: https:; font-src 'self'; connect-src 'self' https://giscus.app; frame-src https://giscus.app; object-src 'none'; base-uri 'self'
+  X-Robots-Tag: index, follow
+
+# Cache static assets aggressively
+/*.js
+  Cache-Control: public, max-age=31536000, immutable
+/*.css
+  Cache-Control: public, max-age=31536000, immutable
+/*.svg
+  Cache-Control: public, max-age=31536000, immutable
+/*.woff2
+  Cache-Control: public, max-age=31536000, immutable
+
+# HTML files - short cache for content updates
+/*.html
+  Cache-Control: public, max-age=3600, must-revalidate
+
+# News content - markdown files
+/content/*
+  Cache-Control: public, max-age=3600, must-revalidate
+
+# Admin - no cache
+/admin/*
+  Cache-Control: no-cache, no-store, must-revalidate

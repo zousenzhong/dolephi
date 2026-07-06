@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Dolephi - Premium shower enclosure manufacturer from China. 15+ years experience, 50+ countries, CE/UPC/CUPC certified. OEM/ODM welcome.">
+<title>Dolephi | Shower Enclosure Manufacturer | OEM/ODM Factory | CE & UPC Certified</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+--blue:#3D8B5C;--blue-d:#256B43;--blue-l:#E6F4EA;--steel:#2C3E50;--gray:#5F6B7A;--gray-l:#F4F6F8;--amber:#B8860B;--amber-l:#FAF3E0;--line:#E2E6EA;--white:#fff;--green:#1D9E75;--green-l:#E1F5EE;--red:#A32D2D;--red-l:#FCEBEB;--coral:#D85A30;--coral-l:#FAECE7;--purple:#534AB7;--purple-l:#EEEDFE;--max:1200px
+}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans Arabic",sans-serif;color:var(--steel);line-height:1.6;background:var(--white);overflow-x:hidden}
+img{max-width:100%;height:auto;display:block}
+a{text-decoration:none;color:inherit}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+
+/* Header */
+header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.hdr-in{display:flex;align-items:center;justify-content:space-between;height:64px;gap:12px}
+.logo{font-size:18px;font-weight:700;color:var(--blue);letter-spacing:-.5px;display:flex;align-items:center;gap:8px;white-space:nowrap}
+.logo svg{width:28px;height:28px;flex-shrink:0}
+nav{display:flex;gap:20px;flex-wrap:nowrap;overflow-x:auto}
+nav a{font-size:13px;color:var(--steel);font-weight:500;transition:color .2s;white-space:nowrap}
+nav a:hover{color:var(--blue)}
+.btn{display:inline-flex;align-items:center;gap:6px;padding:9px 20px;border-radius:6px;font-size:14px;font-weight:600;cursor:pointer;border:none;transition:all .2s;text-align:center;white-space:nowrap}
+.btn-primary{background:var(--blue);color:#fff}
+.btn-primary:hover{background:var(--blue-d)}
+.btn-amber{background:var(--amber);color:#fff}
+.btn-amber:hover{background:#854F0B}
+.btn-outline{background:transparent;border:1.5px solid var(--blue);color:var(--blue)}
+.btn-outline:hover{background:var(--blue-l)}
+.hdr-right{display:flex;gap:8px;align-items:center}
+.burger{display:none;background:none;border:none;cursor:pointer;padding:8px}
+.burger span{display:block;width:22px;height:2px;background:var(--steel);margin:4px 0;transition:.3s}
+
+/* Lang */
+.lang-switch{position:relative}
+.lang-btn{display:flex;align-items:center;gap:5px;padding:6px 10px;border:1px solid var(--line);border-radius:6px;background:#fff;cursor:pointer;font-size:12px;font-weight:500;color:var(--steel);transition:border .2s}
+.lang-btn:hover{border-color:var(--blue)}
+.lang-btn svg{width:14px;height:14px}
+.lang-menu{position:absolute;top:calc(100% + 4px);right:0;background:#fff;border:1px solid var(--line);border-radius:8px;box-shadow:0 8px 24px rgba(0,0,0,.1);min-width:140px;max-height:340px;overflow-y:auto;display:none;z-index:200}
+.lang-menu.open{display:block}
+.lang-item{display:flex;align-items:center;justify-content:space-between;padding:9px 14px;cursor:pointer;font-size:13px;color:var(--steel);transition:background .15s}
+.lang-item:hover{background:var(--gray-l)}
+.lang-item.active{background:var(--blue-l);color:var(--blue);font-weight:600}
+.lang-item .code{font-size:11px;color:var(--gray);font-weight:400}
+
+/* Hero */
+.hero{position:relative;background:linear-gradient(135deg,var(--blue-d) 0%,var(--blue) 100%);color:#fff;padding:70px 0 80px;overflow:hidden}
+.hero::after{content:"";position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Cpath d='M0 30h60M30 0v60' stroke='rgba(255,255,255,.04)' stroke-width='1'/%3E%3C/svg%3E");pointer-events:none}
+.hero-in{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.hero-tag{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);padding:6px 14px;border-radius:20px;font-size:12px;font-weight:500;margin-bottom:20px}
+.hero-tag::before{content:"";width:7px;height:7px;border-radius:50%;background:#5DCAA5;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+.hero h1{font-size:42px;font-weight:700;line-height:1.15;letter-spacing:-1px;margin-bottom:18px}
+.hero h1 span{color:#8FD4A8}
+.hero p{font-size:17px;opacity:.88;margin-bottom:28px;max-width:520px}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+.hero-stats{display:flex;gap:36px;margin-top:36px;padding-top:28px;border-top:1px solid rgba(255,255,255,.15)}
+.hero-stat .n{font-size:28px;font-weight:700;color:#8FD4A8}
+.hero-stat .l{font-size:12px;opacity:.75;text-transform:uppercase;letter-spacing:.5px}
+.hero-visual{position:relative}
+.hero-card{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:16px;padding:28px;backdrop-filter:blur(4px)}
+.hero-card-title{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:1px;opacity:.7;margin-bottom:16px}
+.cert-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.cert-chip{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);border-radius:8px;padding:14px 8px;text-align:center;font-size:12px;font-weight:600}
+.cert-chip svg{width:24px;height:24px;margin:0 auto 6px;opacity:.9}
+
+/* Trust Bar */
+.trustbar{background:var(--gray-l);padding:32px 0;border-bottom:1px solid var(--line)}
+.trustbar-in{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.tstat{text-align:center}
+.tstat .n{font-size:32px;font-weight:700;color:var(--blue)}
+.tstat .l{font-size:13px;color:var(--gray);margin-top:4px}
+
+/* Section base */
+section{padding:72px 0}
+.sec-head{text-align:center;max-width:680px;margin:0 auto 48px}
+.sec-eyebrow{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:2px;color:var(--amber);margin-bottom:12px}
+.sec-head h2{font-size:30px;font-weight:700;color:var(--steel);letter-spacing:-.5px;margin-bottom:14px}
+.sec-head p{font-size:16px;color:var(--gray)}
+
+/* About */
+.about{background:var(--white)}
+.about-in{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.about-text h2{font-size:28px;font-weight:700;margin-bottom:16px;letter-spacing:-.5px}
+.about-text p{color:var(--gray);margin-bottom:16px}
+.about-list{list-style:none;margin-top:20px}
+.about-list li{display:flex;gap:10px;align-items:flex-start;margin-bottom:12px;font-size:15px}
+.about-list svg{width:20px;height:20px;color:var(--green);flex-shrink:0;margin-top:2px}
+.about-visual{position:relative}
+.about-img{width:100%;aspect-ratio:4/3;border-radius:12px;background:linear-gradient(135deg,var(--blue-l),#D4ECDB);display:flex;align-items:center;justify-content:center;overflow:hidden}
+.about-img svg{width:60%;height:60%;opacity:.7}
+.about-badge{position:absolute;bottom:-20px;left:-20px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px 24px;box-shadow:0 8px 24px rgba(0,0,0,.08)}
+.about-badge .n{font-size:26px;font-weight:700;color:var(--blue)}
+.about-badge .l{font-size:12px;color:var(--gray)}
+
+/* Certifications */
+.certs{background:var(--gray-l)}
+.cert-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.cert-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:28px 20px;text-align:center;transition:transform .2s,box-shadow .2s}
+.cert-card:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(61,139,92,.12)}
+.cert-card .ico{width:52px;height:52px;margin:0 auto 14px;background:var(--blue-l);border-radius:50%;display:flex;align-items:center;justify-content:center}
+.cert-card .ico svg{width:26px;height:26px;color:var(--blue)}
+.cert-card h3{font-size:15px;font-weight:600;margin-bottom:6px}
+.cert-card p{font-size:13px;color:var(--gray)}
+
+/* Pain sections */
+.painsec{background:var(--white)}
+.painsec.alt{background:var(--gray-l)}
+.pain-intro{display:flex;align-items:center;gap:10px;justify-content:center;margin-bottom:8px;flex-wrap:wrap}
+.pain-source{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:500;padding:4px 10px;border-radius:20px}
+.pain-source.fb{background:#E7F0FD;color:#1877F2}
+.pain-source.yt{background:#FCE8E8;color:#FF0000}
+.pain-source.ig{background:#FCE0EE;color:#C13584}
+.pain-source svg{width:14px;height:14px}
+.pain-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.pain-card{border:1px solid var(--line);border-radius:12px;overflow:hidden;transition:box-shadow .2s}
+.pain-card:hover{box-shadow:0 8px 24px rgba(0,0,0,.08)}
+.pain-head{padding:18px 18px 0;display:flex;align-items:flex-start;gap:10px}
+.pain-icon{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.pain-icon.cred{background:var(--red-l);color:var(--red)}
+.pain-icon.camber{background:var(--amber-l);color:var(--amber)}
+.pain-icon.ccoral{background:var(--coral-l);color:var(--coral)}
+.pain-icon.cpurple{background:var(--purple-l);color:var(--purple)}
+.pain-icon.cgreen{background:var(--green-l);color:var(--green)}
+.pain-icon.cblue{background:var(--blue-l);color:var(--blue)}
+.pain-icon svg{width:20px;height:20px}
+.pain-head h3{font-size:14px;font-weight:600;margin-bottom:3px;line-height:1.3}
+.pain-source-tag{font-size:11px;color:var(--gray)}
+.pain-quote{font-size:12px;color:var(--gray);font-style:italic;padding:10px 12px;background:var(--gray-l);border-radius:8px;margin:10px 18px 0;border-left:3px solid var(--coral);line-height:1.5}
+.pain-quote::before{content:'';font-size:16px;margin-right:2px}
+.pain-sol{padding:14px 18px;background:var(--green-l);border-top:1px solid var(--line);margin-top:10px}
+.pain-sol-label{display:flex;align-items:center;gap:6px;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:var(--green);margin-bottom:3px}
+.pain-sol-label svg{width:12px;height:12px}
+.pain-sol-text{font-size:12px;color:var(--steel);font-weight:500;line-height:1.5}
+
+/* B2B pain */
+.b2b-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.b2b-card{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line);border-radius:12px;overflow:hidden;transition:box-shadow .2s}
+.b2b-card:hover{box-shadow:0 8px 24px rgba(0,0,0,.06)}
+.b2b-pain{padding:20px;background:var(--red-l)}
+.b2b-pain .lbl{display:flex;align-items:center;gap:4px;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:var(--red);margin-bottom:8px}
+.b2b-pain .lbl svg{width:12px;height:12px}
+.b2b-pain h3{font-size:13px;font-weight:600;margin-bottom:5px}
+.b2b-pain p{font-size:12px;color:var(--gray);line-height:1.5}
+.b2b-sol{padding:20px;background:var(--green-l)}
+.b2b-sol .lbl{display:flex;align-items:center;gap:4px;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:var(--green);margin-bottom:8px}
+.b2b-sol .lbl svg{width:12px;height:12px}
+.b2b-sol h3{font-size:13px;font-weight:600;margin-bottom:5px}
+.b2b-sol p{font-size:12px;color:var(--steel);line-height:1.5}
+
+/* Products */
+.prod-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.prod-card{border:1px solid var(--line);border-radius:12px;overflow:hidden;transition:box-shadow .2s,transform .2s}
+.prod-card:hover{box-shadow:0 12px 32px rgba(0,0,0,.08);transform:translateY(-3px)}
+.prod-img{aspect-ratio:5/4;background:linear-gradient(135deg,var(--blue-l),#EDF5EF);display:flex;align-items:center;justify-content:center}
+.prod-img svg{width:50%;height:50%;opacity:.55}
+.prod-body{padding:20px}
+.prod-body h3{font-size:16px;font-weight:600;margin-bottom:6px}
+.prod-body p{font-size:13px;color:var(--gray)}
+.prod-tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}
+.prod-tags span{font-size:11px;background:var(--gray-l);color:var(--gray);padding:3px 8px;border-radius:4px}
+
+/* Manufacturing */
+.mfg{background:var(--steel);color:#fff}
+.mfg .sec-head h2{color:#fff}
+.mfg .sec-head p{color:rgba(255,255,255,.7)}
+.mfg-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.mfg-visual{border-radius:12px;overflow:hidden;aspect-ratio:4/3;background:linear-gradient(135deg,#1a2935,#2C3E50);display:flex;align-items:center;justify-content:center}
+.mfg-visual svg{width:55%;height:55%;opacity:.4}
+.mfg-steps{list-style:none;counter-reset:step}
+.mfg-steps li{counter-increment:step;display:flex;gap:16px;margin-bottom:24px}
+.mfg-steps li::before{content:counter(step);flex-shrink:0;width:36px;height:36px;border-radius:50%;background:var(--blue);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:15px}
+.mfg-steps h3{font-size:15px;font-weight:600;margin-bottom:4px}
+.mfg-steps p{font-size:14px;color:rgba(255,255,255,.65)}
+
+/* Clients */
+.clients{background:#fff}
+.client-logos{display:grid;grid-template-columns:repeat(6,1fr);gap:16px;margin-bottom:40px}
+.client-logo{height:64px;border:1px solid var(--line);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600;color:var(--gray);background:var(--gray-l)}
+.client-logo span{opacity:.6}
+.case-card{background:var(--gray-l);border-radius:12px;padding:28px;border-left:4px solid var(--blue)}
+.case-card .quote{font-size:16px;color:var(--steel);font-style:italic;margin-bottom:14px}
+.case-card .author{font-size:14px;font-weight:600}
+.case-card .author small{display:block;font-weight:400;color:var(--gray);font-size:13px}
+
+/* CTA Section */
+.cta-sec{background:linear-gradient(135deg,var(--blue),var(--blue-d));color:#fff;text-align:center;padding:64px 0}
+.cta-sec h2{font-size:28px;font-weight:700;margin-bottom:12px}
+.cta-sec p{opacity:.85;margin-bottom:24px;font-size:16px}
+.cta-sec .btn{padding:14px 32px;font-size:15px}
+
+/* Contact */
+.contact{background:var(--gray-l)}
+.contact-in{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.contact-info h2{font-size:26px;font-weight:700;margin-bottom:16px}
+.contact-info p{color:var(--gray);margin-bottom:24px}
+.contact-item{display:flex;gap:14px;align-items:flex-start;margin-bottom:18px}
+.contact-item svg{width:22px;height:22px;color:var(--blue);flex-shrink:0;margin-top:2px}
+.contact-item .l{font-size:12px;color:var(--gray);text-transform:uppercase;letter-spacing:.5px}
+.contact-item .v{font-size:15px;font-weight:500}
+.form-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:32px}
+.form-card h3{font-size:18px;font-weight:600;margin-bottom:20px}
+.form-row{margin-bottom:16px}
+.form-row label{display:block;font-size:13px;font-weight:500;margin-bottom:6px;color:var(--steel)}
+.form-row input,.form-row textarea,.form-row select{width:100%;padding:11px 14px;border:1px solid var(--line);border-radius:8px;font-size:14px;font-family:inherit;transition:border .2s}
+.form-row input:focus,.form-row textarea:focus,.form-row select:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px var(--blue-l)}
+.form-row textarea{resize:vertical;min-height:90px}
+.form-2col{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.form-card .btn{width:100%;justify-content:center;margin-top:4px;padding:13px}
+.form-note{font-size:12px;color:var(--gray);text-align:center;margin-top:12px}
+
+/* Footer */
+footer{background:var(--blue-d);color:rgba(255,255,255,.7);padding:48px 0 24px}
+.ftr-in{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:36px;margin-bottom:32px}
+.ftr-brand .logo{color:#fff;margin-bottom:12px}
+.ftr-brand p{font-size:14px;max-width:280px}
+.ftr-social{display:flex;gap:10px;margin-top:12px}
+.ftr-social a{width:36px;height:36px;border-radius:8px;background:rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;transition:background .2s}
+.ftr-social a:hover{background:rgba(255,255,255,.2)}
+.ftr-social svg{width:18px;height:18px}
+.ftr-col h4{color:#fff;font-size:14px;font-weight:600;margin-bottom:14px}
+.ftr-col a{display:block;font-size:13px;margin-bottom:8px;transition:color .2s}
+.ftr-col a:hover{color:#fff}
+.ftr-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:20px;display:flex;justify-content:space-between;font-size:12px;flex-wrap:wrap;gap:10px}
+
+/* Reveal animation */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .6s,transform .6s}
+.reveal.in{opacity:1;transform:none}
+
+/* Responsive */
+@media(max-width:900px){
+.hero-in,.about-in,.mfg-grid,.contact-in{grid-template-columns:1fr}
+.hero h1{font-size:32px}
+.prod-grid,.pain-grid{grid-template-columns:repeat(2,1fr)}
+.cert-cards{grid-template-columns:repeat(2,1fr)}
+.b2b-grid{grid-template-columns:1fr}
+.client-logos{grid-template-columns:repeat(3,1fr)}
+.ftr-in{grid-template-columns:1fr 1fr}
+nav{display:none;position:absolute;top:64px;left:0;right:0;background:#fff;flex-direction:column;padding:20px 24px;border-bottom:1px solid var(--line);gap:0;overflow:visible}
+nav.open{display:flex}
+nav.open a{padding:12px 0;border-bottom:1px solid var(--line)}
+.burger{display:block}
+.hdr-right .btn-outline{display:none}
+.hero-stats{flex-wrap:wrap;gap:20px}
+}
+@media(max-width:560px){
+.trustbar-in{grid-template-columns:repeat(2,1fr)}
+.prod-grid,.cert-cards,.client-logos,.pain-grid{grid-template-columns:1fr 1fr}
+.b2b-card{grid-template-columns:1fr}
+.form-2col{grid-template-columns:1fr}
+.ftr-in{grid-template-columns:1fr}
+.hero h1{font-size:26px}
+section{padding:56px 0}
+}
+</style>
+</head>
+<body>
+
+<header>
+<div class="wrap hdr-in">
+<a href="#" class="logo">
+<svg viewBox="0 0 32 32" fill="none"><rect x="4" y="3" width="24" height="26" rx="2" stroke="currentColor" stroke-width="2"/><path d="M16 3v26M4 16h24" stroke="currentColor" stroke-width="1.5"/><circle cx="16" cy="16" r="3" stroke="currentColor" stroke-width="1.5"/></svg>
+Dolephi<span style="color:var(--amber)">.</span>
+</a>
+<nav id="nav">
+<a href="#about" data-i18n="nav_about">About</a>
+<a href="#certs" data-i18n="nav_certs">Certifications</a>
+<a href="#cpain" data-i18n="nav_cpain">Consumer Issues</a>
+<a href="#bpain" data-i18n="nav_bpain">B2B Solutions</a>
+<a href="#products" data-i18n="nav_products">Products</a>
+<a href="#mfg" data-i18n="nav_mfg">Manufacturing</a>
+<a href="/news.html" data-i18n="nav_news">News</a>
+<a href="#contact" data-i18n="nav_contact">Contact</a>
+</nav>
+<div class="hdr-right">
+<div class="lang-switch">
+<button class="lang-btn" id="langBtn" onclick="toggleLang(event)">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 010 20"/></svg>
+<span id="langLabel">EN</span>
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:10px;height:10px"><path d="M6 9l6 6 6-6"/></svg>
+</button>
+<div class="lang-menu" id="langMenu">
+<div class="lang-item active" onclick="setLang('en')"><span>English</span><span class="code">EN</span></div>
+<div class="lang-item" onclick="setLang('zh')"><span>中文</span><span class="code">ZH</span></div>
+<div class="lang-item" onclick="setLang('es')"><span>Español</span><span class="code">ES</span></div>
+<div class="lang-item" onclick="setLang('fr')"><span>Français</span><span class="code">FR</span></div>
+<div class="lang-item" onclick="setLang('de')"><span>Deutsch</span><span class="code">DE</span></div>
+<div class="lang-item" onclick="setLang('pt')"><span>Português</span><span class="code">PT</span></div>
+<div class="lang-item" onclick="setLang('it')"><span>Italiano</span><span class="code">IT</span></div>
+<div class="lang-item" onclick="setLang('nl')"><span>Nederlands</span><span class="code">NL</span></div>
+<div class="lang-item" onclick="setLang('ru')"><span>Русский</span><span class="code">RU</span></div>
+<div class="lang-item" onclick="setLang('ar')"><span>العربية</span><span class="code">AR</span></div>
+<div class="lang-item" onclick="setLang('ja')"><span>日本語</span><span class="code">JA</span></div>
+<div class="lang-item" onclick="setLang('ko')"><span>한국어</span><span class="code">KO</span></div>
+<div class="lang-item" onclick="setLang('tr')"><span>Türkçe</span><span class="code">TR</span></div>
+<div class="lang-item" onclick="setLang('pl')"><span>Polski</span><span class="code">PL</span></div>
+<div class="lang-item" onclick="setLang('vi')"><span>Tiếng Việt</span><span class="code">VI</span></div>
+<div class="lang-item" onclick="setLang('th')"><span>ไทย</span><span class="code">TH</span></div>
+<div class="lang-item" onclick="setLang('id')"><span>Bahasa Indonesia</span><span class="code">ID</span></div>
+<div class="lang-item" onclick="setLang('ms')"><span>Bahasa Melayu</span><span class="code">MS</span></div>
+<div class="lang-item" onclick="setLang('hi')"><span>हिन्दी</span><span class="code">HI</span></div>
+<div class="lang-item" onclick="setLang('fa')"><span>فارسی</span><span class="code">FA</span></div>
+<div class="lang-item" onclick="setLang('he')"><span>עברית</span><span class="code">HE</span></div>
+<div class="lang-item" onclick="setLang('sv')"><span>Svenska</span><span class="code">SV</span></div>
+<div class="lang-item" onclick="setLang('uk')"><span>Українська</span><span class="code">UK</span></div>
+<div class="lang-item" onclick="setLang('cs')"><span>Čeština</span><span class="code">CS</span></div>
+<div class="lang-item" onclick="setLang('el')"><span>Ελληνικά</span><span class="code">EL</span></div>
+<div class="lang-item" onclick="setLang('ro')"><span>Română</span><span class="code">RO</span></div>
+<div class="lang-item" onclick="setLang('hu')"><span>Magyar</span><span class="code">HU</span></div>
+<div class="lang-item" onclick="setLang('da')"><span>Dansk</span><span class="code">DA</span></div>
+<div class="lang-item" onclick="setLang('fi')"><span>Suomi</span><span class="code">FI</span></div>
+<div class="lang-item" onclick="setLang('fil')"><span>Filipino</span><span class="code">FIL</span></div>
+</div>
+</div>
+<a href="#contact" class="btn btn-outline" data-i18n="nav_quote">Get Quote</a>
+<a href="#contact" class="btn btn-primary" data-i18n="nav_inquire">Inquire Now</a>
+<button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+</div>
+</div>
+</header>
+
+<section class="hero">
+<div class="wrap hero-in">
+<div class="hero-text">
+<span class="hero-tag" data-i18n="hero_tag">Trusted by 200+ wholesalers in 50+ countries</span>
+<h1 data-i18n-html="hero_h1">Premium Shower Enclosures <span>Built for Global Markets</span></h1>
+<p data-i18n="hero_p">15+ years of manufacturing excellence. OEM/ODM for distributors, contractors, and hotel projects worldwide. Certified, reliable, delivered on time.</p>
+<div class="hero-cta">
+<a href="#contact" class="btn btn-amber" data-i18n="hero_cta1">Request a Quote</a>
+<a href="#products" class="btn btn-outline" style="border-color:rgba(255,255,255,.4);color:#fff" data-i18n="hero_cta2">View Products</a>
+</div>
+<div class="hero-stats">
+<div class="hero-stat"><div class="n">15+</div><div class="l" data-i18n="hero_s1">Years</div></div>
+<div class="hero-stat"><div class="n">50+</div><div class="l" data-i18n="hero_s2">Countries</div></div>
+<div class="hero-stat"><div class="n">35,000</div><div class="l" data-i18n="hero_s3">m2 Factory</div></div>
+<div class="hero-stat"><div class="n">200+</div><div class="l" data-i18n="hero_s4">B2B Clients</div></div>
+</div>
+</div>
+<div class="hero-visual">
+<div class="hero-card">
+<div class="hero-card-title" data-i18n="hero_certtitle">Certified & Compliant</div>
+<div class="cert-grid">
+<div class="cert-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L3 7v6c0 5 3.5 9 9 11 5.5-2 9-6 9-11V7l-9-5z"/><path d="M9 12l2 2 4-4"/></svg>CE</div>
+<div class="cert-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L3 7v6c0 5 3.5 9 9 11 5.5-2 9-6 9-11V7l-9-5z"/><path d="M9 12l2 2 4-4"/></svg>UPC</div>
+<div class="cert-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L3 7v6c0 5 3.5 9 9 11 5.5-2 9-6 9-11V7l-9-5z"/><path d="M9 12l2 2 4-4"/></svg>CUPC</div>
+<div class="cert-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L3 7v6c0 5 3.5 9 9 11 5.5-2 9-6 9-11V7l-9-5z"/><path d="M9 12l2 2 4-4"/></svg>ISO9001</div>
+<div class="cert-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L3 7v6c0 5 3.5 9 9 11 5.5-2 9-6 9-11V7l-9-5z"/><path d="M9 12l2 2 4-4"/></svg>SGS</div>
+<div class="cert-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L3 7v6c0 5 3.5 9 9 11 5.5-2 9-6 9-11V7l-9-5z"/><path d="M9 12l2 2 4-4"/></svg>WaterMark</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="trustbar">
+<div class="wrap trustbar-in">
+<div class="tstat reveal"><div class="n">15+</div><div class="l" data-i18n="trust_1">Years of Manufacturing</div></div>
+<div class="tstat reveal"><div class="n">50+</div><div class="l" data-i18n="trust_2">Export Countries</div></div>
+<div class="tstat reveal"><div class="n">500K+</div><div class="l" data-i18n="trust_3">Units Shipped</div></div>
+<div class="tstat reveal"><div class="n">99.2%</div><div class="l" data-i18n="trust_4">On-Time Delivery</div></div>
+</div>
+</section>
+
+<section class="about" id="about">
+<div class="wrap about-in">
+<div class="about-text reveal">
+<div class="sec-eyebrow" data-i18n="about_eyebrow">About Us</div>
+<h2 data-i18n="about_h2">A Factory You Can Trust at Scale</h2>
+<p data-i18n="about_p">Since 2009, Dolephi has specialized in designing and manufacturing high-quality shower enclosures for B2B partners worldwide. From our 35,000 m2 facility, we produce over 200,000 units annually -- serving distributors, hotel groups, contractors, and retailers across Europe, North America, the Middle East, and Southeast Asia.</p>
+<ul class="about-list">
+<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg><span data-i18n="about_li1"><strong>In-house production</strong> -- glass cutting, tempering, aluminum extrusion, and assembly under one roof for full quality control.</span></li>
+<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg><span data-i18n="about_li2"><strong>OEM/ODM expertise</strong> -- from concept design to packaging, we build products to your brand specification.</span></li>
+<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg><span data-i18n="about_li3"><strong>Global compliance</strong> -- CE, UPC, CUPC, WaterMark certified. Tempered glass meets EN 12150 and ANSI Z97.1 standards.</span></li>
+<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg><span data-i18n="about_li4"><strong>Reliable lead times</strong> -- 25-35 days standard. 99.2% on-time delivery rate tracked over 12 months.</span></li>
+</ul>
+</div>
+<div class="about-visual reveal">
+<div class="about-img">
+<svg viewBox="0 0 200 150" fill="none" stroke="var(--blue)" stroke-width="1.5"><rect x="20" y="20" width="160" height="110" rx="2"/><path d="M100 20v110M20 75h160"/><rect x="30" y="30" width="60" height="35" rx="1" opacity=".3"/><rect x="110" y="30" width="60" height="35" rx="1" opacity=".3"/><circle cx="100" cy="95" r="12" opacity=".3"/><path d="M88 95h24M100 83v24" opacity=".3"/></svg>
+</div>
+<div class="about-badge"><div class="n">200K+</div><div class="l" data-i18n="about_badge">Units / Year</div></div>
+</div>
+</div>
+</section>
+
+<section class="certs" id="certs">
+<div class="wrap">
+<div class="sec-head reveal">
+<div class="sec-eyebrow" data-i18n="cert_eyebrow">Certifications</div>
+<h2 data-i18n="cert_h2">Certified for Every Major Market</h2>
+<p data-i18n="cert_p">Our products meet the regulatory standards of Europe, North America, Australia, and the Middle East -- so your imports clear customs without friction.</p>
+</div>
+<div class="cert-cards">
+<div class="cert-card reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M8 12a4 4 0 018 0M12 2v4M12 18v4M2 12h4M18 12h4"/></svg></div><h3>CE / EN 12150</h3><p data-i18n="cert_c1">European safety & tempered glass standard</p></div>
+<div class="cert-card reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2L3 7v6c0 5 3.5 9 9 11 5.5-2 9-6 9-11V7l-9-5z"/><path d="M9 12l2 2 4-4"/></svg></div><h3>UPC / CUPC</h3><p data-i18n="cert_c2">North American plumbing code certified</p></div>
+<div class="cert-card reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6v6H9z"/><path d="M9 12h6M12 9v6"/></svg></div><h3>ISO 9001:2015</h3><p data-i18n="cert_c3">Quality management system certified</p></div>
+<div class="cert-card reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2v20M2 12h20M5 5l14 14M19 5L5 19"/></svg></div><h3>SGS Audited</h3><p data-i18n="cert_c4">Third-party factory audit verified</p></div>
+</div>
+</div>
+</section>
+
+<!-- C-consumer pain points -->
+<section class="painsec" id="cpain">
+<div class="wrap">
+<div class="sec-head reveal">
+<div class="sec-eyebrow" data-i18n="cpain_eyebrow">Consumer Pain Points Solved</div>
+<h2 data-i18n="cpain_h2">Real Complaints from Social Media? We Solved Them.</h2>
+<p data-i18n="cpain_p">We analyzed thousands of consumer reviews on Facebook, YouTube, and Instagram. Here are the top shower enclosure complaints -- and how Dolephi engineers them away. Fewer complaints means fewer returns for your business.</p>
+</div>
+<div class="pain-intro reveal">
+<span class="pain-source fb"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12a12 12 0 10-13.9 11.9v-8.4H7.1V12h3V9.4c0-3 1.8-4.7 4.5-4.7 1.3 0 2.7.2 2.7.2v3h-1.5c-1.5 0-2 .9-2 1.9V12h3.3l-.5 3.5h-2.8v8.4A12 12 0 0024 12z"/></svg>Facebook</span>
+<span class="pain-source yt"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 00-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 00.5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 002.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 002.1-2.1c.5-1.9.5-5.8.5-5.8s0-3.9-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg>YouTube</span>
+<span class="pain-source ig"><svg viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/></svg>Instagram</span>
+</div>
+<div class="pain-grid">
+<div class="pain-card reveal"><div class="pain-head"><div class="pain-icon cred"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 9v4M12 17h.01M10.3 3.9L1.8 18a2 2 0 001.7 3h17a2 2 0 001.7-3L13.7 3.9a2 2 0 00-3.4 0z"/></svg></div><div><h3 data-i18n="cpain1_h">Glass spontaneous explosion</h3><div class="pain-source-tag" data-i18n="cpain1_src">YouTube review / Facebook group</div></div></div><div class="pain-quote" data-i18n="cpain1_quote">My shower glass just shattered out of nowhere in the middle of the night, scared the whole family.</div><div class="pain-sol"><div class="pain-sol-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg><span data-i18n="cpain_sol">Our solution</span></div><div class="pain-sol-text" data-i18n="cpain1_sol">EN 12150 certified tempered glass with self-explosion rate below 0.3%. Optional laminated safety film (SGS) that holds fragments even if broken. Every pane laser-etched with tempering date for traceability.</div></div></div>
+<div class="pain-card reveal"><div class="pain-head"><div class="pain-icon camber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M7 8V5a5 5 0 0110 0v3"/></svg></div><div><h3 data-i18n="cpain2_h">Sliding door jumps off track</h3><div class="pain-source-tag" data-i18n="cpain2_src">Facebook DIY group / YouTube</div></div></div><div class="pain-quote" data-i18n="cpain2_quote">The sliding door keeps derailing and it is impossible to roll smoothly after 3 months.</div><div class="pain-sol"><div class="pain-sol-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg><span data-i18n="cpain_sol">Our solution</span></div><div class="pain-sol-text" data-i18n="cpain2_sol">Premium sealed-bearing rollers tested 100,000+ open-close cycles. Anti-jump derailment design with dual-wheel stabilizers. Smooth glide guaranteed for 10+ years of daily use.</div></div></div>
+<div class="pain-card reveal"><div class="pain-head"><div class="pain-icon cblue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.7s-6 5.5-6 11a6 6 0 0012 0c0-5.5-6-11-6-11z"/></svg></div><div><h3 data-i18n="cpain3_h">Water leaks from the bottom</h3><div class="pain-source-tag" data-i18n="cpain3_src">Instagram bathroom page / Facebook</div></div></div><div class="pain-quote" data-i18n="cpain3_quote">Water seeps out under the door every shower, ruined my bathroom floor within weeks.</div><div class="pain-sol"><div class="pain-sol-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg><span data-i18n="cpain_sol">Our solution</span></div><div class="pain-sol-text" data-i18n="cpain3_sol">Full-length magnetic seal strip + flexible bottom sweep blade. Every unit 100% water-pressure tested before packaging. Zero-leakage design validated in our spray-test lab.</div></div></div>
+<div class="pain-card reveal"><div class="pain-head"><div class="pain-icon ccoral"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"/></svg></div><div><h3 data-i18n="cpain4_h">Hardware rusts within months</h3><div class="pain-source-tag" data-i18n="cpain4_src">YouTube review / Amazon comments</div></div></div><div class="pain-quote" data-i18n="cpain4_quote">The hinges and handles started rusting after 6 months. Looks terrible and feels cheap.</div><div class="pain-sol"><div class="pain-sol-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg><span data-i18n="cpain_sol">Our solution</span></div><div class="pain-sol-text" data-i18n="cpain4_sol">All hardware in solid 304 stainless steel, passivated and salt-spray tested 48+ hours. Chrome and brushed-nickel PVD finishes available. Zero rust, zero corrosion, guaranteed.</div></div></div>
+<div class="pain-card reveal"><div class="pain-head"><div class="pain-icon cpurple"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5h18M3 12h18M3 19h18"/></svg></div><div><h3 data-i18n="cpain5_h">Hard water stains impossible to clean</h3><div class="pain-source-tag" data-i18n="cpain5_src">Instagram cleaning hacks / Facebook</div></div></div><div class="pain-quote" data-i18n="cpain5_quote">Limescale builds up so fast, I spend 20 minutes scrubbing every week. So frustrating.</div><div class="pain-sol"><div class="pain-sol-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg><span data-i18n="cpain_sol">Our solution</span></div><div class="pain-sol-text" data-i18n="cpain5_sol">Optional nano-coating Easy-Clean glass surface (hydrophobic). Water beads off, limescale cannot bond. Wipe with a squeegee in 10 seconds. Coating lasts 5+ years.</div></div></div>
+<div class="pain-card reveal"><div class="pain-head"><div class="pain-icon cgreen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a4 4 0 01-6 6L3 18v3h3l5.7-5.7a4 4 0 016-6l-2 2-2-2 2-2z"/></svg></div><div><h3 data-i18n="cpain6_h">Installation is a nightmare</h3><div class="pain-source-tag" data-i18n="cpain6_src">YouTube DIY / Facebook contractor group</div></div></div><div class="pain-quote" data-i18n="cpain6_quote">Instructions made no sense, parts were not labeled, took 4 hours and two trips to the hardware store.</div><div class="pain-sol"><div class="pain-sol-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg><span data-i18n="cpain_sol">Our solution</span></div><div class="pain-sol-text" data-i18n="cpain6_sol">Pre-assembled modules with numbered parts. Step-by-step video guides per model (QR code on box). Wall-anchor template included. Average install time: 45 minutes, one person.</div></div></div>
+</div>
+</div>
+</section>
+
+<!-- B2B pain points -->
+<section class="painsec alt" id="bpain">
+<div class="wrap">
+<div class="sec-head reveal">
+<div class="sec-eyebrow" data-i18n="bpain_eyebrow">B2B Pain Points Solved</div>
+<h2 data-i18n="bpain_h2">What Keeps B2B Buyers Up at Night? We Fixed That.</h2>
+<p data-i18n="bpain_p">We have supplied 200+ distributors, hotel groups, and retailers across 50+ countries. These are the real procurement challenges they face -- and how our factory eliminates them.</p>
+</div>
+<div class="b2b-grid" id="b2bGrid"></div>
+</div>
+</section>
+
+<section id="products">
+<div class="wrap">
+<div class="sec-head reveal"><div class="sec-eyebrow" data-i18n="prod_eyebrow">Products</div><h2 data-i18n="prod_h2">Shower Enclosures for Every Project</h2><p data-i18n="prod_p">From compact sliding doors to luxury walk-in enclosures -- customizable in glass thickness, finish, hardware, and branding.</p></div>
+<div class="prod-grid">
+<div class="prod-card reveal"><div class="prod-img"><svg viewBox="0 0 120 96" fill="none" stroke="var(--blue)" stroke-width="1.5"><rect x="10" y="8" width="100" height="80" rx="2"/><path d="M60 8v80M10 48h100"/><rect x="15" y="13" width="40" height="30" opacity=".2"/><rect x="65" y="13" width="40" height="30" opacity=".2"/></svg></div><div class="prod-body"><h3 data-i18n="prod1_h">Sliding Shower Doors</h3><p data-i18n="prod1_p">Space-saving smooth-roll design, ideal for compact bathrooms.</p><div class="prod-tags"><span>6mm/8mm</span><span>Roller track</span></div></div></div>
+<div class="prod-card reveal"><div class="prod-img"><svg viewBox="0 0 120 96" fill="none" stroke="var(--blue)" stroke-width="1.5"><rect x="10" y="8" width="100" height="80" rx="2"/><path d="M10 8a40 40 0 0140 0M10 88a40 40 0 0140 0"/><circle cx="65" cy="48" r="3" fill="var(--blue)"/></svg></div><div class="prod-body"><h3 data-i18n="prod2_h">Pivot & Hinged Doors</h3><p data-i18n="prod2_p">Wide-access pivot system with soft-close hinges.</p><div class="prod-tags"><span>8mm/10mm</span><span>Soft-close</span></div></div></div>
+<div class="prod-card reveal"><div class="prod-img"><svg viewBox="0 0 120 96" fill="none" stroke="var(--blue)" stroke-width="1.5"><rect x="10" y="8" width="100" height="80" rx="2"/><path d="M10 48h100M40 8v80M80 8v80" opacity=".5"/></svg></div><div class="prod-body"><h3 data-i18n="prod3_h">Walk-In Enclosures</h3><p data-i18n="prod3_p">Frameless luxury design for high-end residential & hotel projects.</p><div class="prod-tags"><span>10mm/12mm</span><span>Hotel grade</span></div></div></div>
+<div class="prod-card reveal"><div class="prod-img"><svg viewBox="0 0 120 96" fill="none" stroke="var(--blue)" stroke-width="1.5"><rect x="20" y="8" width="80" height="80" rx="2"/><path d="M20 8a40 40 0 0180 0M20 88a40 40 0 0180 0" opacity=".4"/><path d="M60 8v80"/></svg></div><div class="prod-body"><h3 data-i18n="prod4_h">Corner Units</h3><p data-i18n="prod4_p">Quarter-circle or square corner enclosures maximizing space.</p><div class="prod-tags"><span>6mm/8mm</span><span>Custom fit</span></div></div></div>
+<div class="prod-card reveal"><div class="prod-img"><svg viewBox="0 0 120 96" fill="none" stroke="var(--blue)" stroke-width="1.5"><rect x="10" y="8" width="100" height="80" rx="2"/><path d="M35 8v80M85 8v80M10 48h100" opacity=".4"/><rect x="15" y="13" width="15" height="70" opacity=".2"/><rect x="90" y="13" width="15" height="70" opacity=".2"/></svg></div><div class="prod-body"><h3 data-i18n="prod5_h">Fixed Glass Panels</h3><p data-i18n="prod5_p">Walk-through wet-room panels for open-plan bathrooms.</p><div class="prod-tags"><span>10mm/12mm</span><span>Minimalist</span></div></div></div>
+<div class="prod-card reveal"><div class="prod-img"><svg viewBox="0 0 120 96" fill="none" stroke="var(--blue)" stroke-width="1.5"><rect x="10" y="8" width="100" height="80" rx="2"/><path d="M10 48h100M35 8v80M85 8v80" opacity=".4"/><circle cx="60" cy="48" r="6" opacity=".3"/></svg></div><div class="prod-body"><h3 data-i18n="prod6_h">Custom OEM/ODM</h3><p data-i18n="prod6_p">Fully bespoke design -- your brand, your specs, your packaging.</p><div class="prod-tags"><span>Private label</span><span>Design support</span></div></div></div>
+</div>
+</div>
+</section>
+
+<section class="mfg" id="mfg">
+<div class="wrap mfg-grid">
+<div class="mfg-visual reveal"><svg viewBox="0 0 200 150" fill="none" stroke="#fff" stroke-width="1"><rect x="20" y="30" width="160" height="100" rx="2"/><path d="M20 60h160M90 30v70M20 130h160" opacity=".4"/><circle cx="50" cy="95" r="15" opacity=".3"/><circle cx="130" cy="95" r="15" opacity=".3"/><rect x="40" y="85" width="20" height="20" opacity=".3"/><rect x="120" y="85" width="20" height="20" opacity=".3"/><path d="M20 30l20-10h140l-20 10M180 30l20-10" opacity=".3"/></svg></div>
+<div class="mfg-text reveal">
+<div class="sec-eyebrow" style="color:#5DCAA5" data-i18n="mfg_eyebrow">Manufacturing</div>
+<h2 style="font-size:26px;font-weight:700;margin-bottom:16px" data-i18n="mfg_h2">From Raw Glass to Finished Product -- In-House</h2>
+<ol class="mfg-steps">
+<li><div><h3 data-i18n="mfg1_h">Glass cutting & edging</h3><p data-i18n="mfg1_p">Precision CNC cutting with polished edges, tolerance plus/minus 0.5mm.</p></div></li>
+<li><div><h3 data-i18n="mfg2_h">Tempering</h3><p data-i18n="mfg2_p">EN 12150 certified tempering furnace -- 4x strength, safe breakage pattern.</p></div></li>
+<li><div><h3 data-i18n="mfg3_h">Aluminum & hardware fitting</h3><p data-i18n="mfg3_p">In-house extrusion lines, anodized finishes, tested hardware assembly.</p></div></li>
+<li><div><h3 data-i18n="mfg4_h">Quality inspection & packaging</h3><p data-i18n="mfg4_p">100% water-test, dimension check, drop-test packaging for export safety.</p></div></li>
+</ol>
+</div>
+</div>
+</section>
+
+<section class="clients" id="clients">
+<div class="wrap">
+<div class="sec-head reveal"><div class="sec-eyebrow" data-i18n="client_eyebrow">Global Clients</div><h2 data-i18n="client_h2">Trusted by Partners Worldwide</h2><p data-i18n="client_p">We supply leading distributors, hotel groups, and renovation chains across five continents.</p></div>
+<div class="client-logos reveal">
+<div class="client-logo"><span>BATHWORKS</span></div><div class="client-logo"><span>AquaLine EU</span></div><div class="client-logo"><span>NORDA</span></div><div class="client-logo"><span>PrimeBath</span></div><div class="client-logo"><span>MiddleEast Co.</span></div><div class="client-logo"><span>Hotel Group</span></div><div class="client-logo"><span>RenovaTEK</span></div><div class="client-logo"><span>BlueWave</span></div><div class="client-logo"><span>CrystalFit</span></div><div class="client-logo"><span>SE Asia Dist.</span></div><div class="client-logo"><span>Marble&Co</span></div><div class="client-logo"><span>Hotel Supply</span></div>
+</div>
+<div class="case-card reveal"><p class="quote" data-i18n="client_quote">"Dolephi has been our OEM partner for 6 years. Their quality consistency, on-time delivery, and willingness to customize hardware for our brand made them indispensable. Defect rate under 0.3% -- best in our supply chain."</p><div class="author">Markus Weber<small data-i18n="client_author">Procurement Director, BathWorks GmbH (Germany)</small></div></div>
+</div>
+</section>
+
+<!-- News & Updates -->
+<section class="newssec" id="news" style="background:var(--gray-l);padding:72px 0">
+<div class="wrap">
+<div class="sec-head reveal">
+<div class="sec-eyebrow" data-i18n="news_eyebrow">News & Updates</div>
+<h2 data-i18n="news_h2">Latest from Dolephi</h2>
+<p data-i18n="news_p">Product launches, factory news, trade shows, and industry insights.</p>
+</div>
+<div class="news-grid" id="homeNewsGrid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px"></div>
+<div style="text-align:center;margin-top:32px">
+<a href="/news.html" class="btn btn-outline" data-i18n="news_view_all">View All News</a>
+</div>
+</div>
+</section>
+
+<section class="cta-sec"><div class="wrap"><h2 data-i18n="cta_h2">Ready to Source from a Certified Factory?</h2><p data-i18n="cta_p">Get a custom quote within 24 hours. Free samples available for verified B2B buyers.</p><a href="#contact" class="btn btn-amber" data-i18n="cta_btn">Get Your Quote Now</a></div></section>
+
+<section class="contact" id="contact">
+<div class="wrap contact-in">
+<div class="contact-info reveal">
+<div class="sec-eyebrow" data-i18n="contact_eyebrow">Contact</div><h2 data-i18n="contact_h2">Let's Build Together</h2><p data-i18n="contact_p">Whether you need a reliable OEM partner or a full ODM solution, our team responds within one business day. Tell us about your project -- volume, target market, and specifications.</p>
+<div class="contact-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z" opacity=".3"/><path d="M22 6l-10 7L2 6"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg><div><div class="l" data-i18n="contact_email">Email</div><div class="v">sales@dolephi-factory.com</div></div></div>
+<div class="contact-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg><div><div class="l">WhatsApp</div><div class="v">+86 138 0000 0000</div></div></div>
+<div class="contact-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><div><div class="l" data-i18n="contact_addr">Factory Address</div><div class="v" data-i18n="contact_addr_v">Industrial Zone, Foshan, Guangdong, China</div></div></div>
+<div class="contact-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><div><div class="l" data-i18n="contact_resp">Response Time</div><div class="v" data-i18n="contact_resp_v">Within 24 hours (Mon-Fri, GMT+8)</div></div></div>
+</div>
+<form class="form-card reveal" onsubmit="return submitForm(event)">
+<h3 data-i18n="form_h3">Request a Quote</h3>
+<div class="form-2col"><div class="form-row"><label data-i18n="form_name">Full name *</label><input type="text" name="name" required></div><div class="form-row"><label data-i18n="form_company">Company *</label><input type="text" name="company" required></div></div>
+<div class="form-2col"><div class="form-row"><label data-i18n="form_email">Email *</label><input type="email" name="email" required></div><div class="form-row"><label data-i18n="form_country">Country *</label><input type="text" name="country" required></div></div>
+<div class="form-row"><label data-i18n="form_product">Product interest</label><select name="product" id="prodSelect"><option data-i18n="form_sel_def">Select a category</option><option data-i18n="prod1_h">Sliding Shower Doors</option><option data-i18n="prod2_h">Pivot & Hinged Doors</option><option data-i18n="prod3_h">Walk-In Enclosures</option><option data-i18n="prod4_h">Corner Units</option><option data-i18n="prod5_h">Fixed Glass Panels</option><option data-i18n="prod6_h">Custom OEM/ODM</option></select></div>
+<div class="form-row"><label data-i18n="form_details">Estimated quantity / project details</label><textarea name="message" id="formMsg" placeholder=""></textarea></div>
+<button type="submit" class="btn btn-primary" data-i18n="form_submit">Send Inquiry</button>
+<p class="form-note" data-i18n="form_note">Your information is confidential. We reply within 24 hours.</p>
+</form>
+</div>
+</section>
+
+<footer>
+<div class="wrap">
+<div class="ftr-in">
+<div class="ftr-brand">
+<a href="#" class="logo"><svg viewBox="0 0 32 32" fill="none"><rect x="4" y="3" width="24" height="26" rx="2" stroke="currentColor" stroke-width="2"/><path d="M16 3v26M4 16h24" stroke="currentColor" stroke-width="1.5"/><circle cx="16" cy="16" r="3" stroke="currentColor" stroke-width="1.5"/></svg>Dolephi<span style="color:var(--amber)">.</span></a>
+<p data-i18n="ftr_desc">Premium shower enclosure manufacturer. OEM/ODM for global B2B partners. Certified, reliable, scalable.</p>
+<div class="ftr-social"><a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="#fff"><path d="M24 12a12 12 0 10-13.9 11.9v-8.4H7.1V12h3V9.4c0-3 1.8-4.7 4.5-4.7 1.3 0 2.7.2 2.7.2v3h-1.5c-1.5 0-2 .9-2 1.9V12h3.3l-.5 3.5h-2.8v8.4A12 12 0 0024 12z"/></svg></a><a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="#fff"><path d="M23.5 6.2a3 3 0 00-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 00.5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 002.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 002.1-2.1c.5-1.9.5-5.8.5-5.8s0-3.9-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg></a><a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="#fff"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/></svg></a><a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="#fff"><path d="M20.4 20.4h-3.6v-5.6c0-1.3 0-3-1.9-3s-2.1 1.4-2.1 2.9v5.7H9.2V9h3.4v1.6h.1a3.8 3.8 0 013.4-1.9c3.6 0 4.3 2.4 4.3 5.5v6.2zM5.3 7.4a2.1 2.1 0 110-4.2 2.1 2.1 0 010 4.2zM7.1 20.4H3.5V9h3.6v11.4zM22.2 0H1.8C.8 0 0 .8 0 1.7v20.6c0 .9.8 1.7 1.8 1.7h20.4c1 0 1.8-.8 1.8-1.7V1.7C24 .8 23.2 0 22.2 0z"/></svg></a></div>
+</div>
+<div class="ftr-col"><h4 data-i18n="ftr_prod">Products</h4><a href="#products" data-i18n="prod1_h">Sliding Doors</a><a href="#products" data-i18n="prod2_h">Pivot Doors</a><a href="#products" data-i18n="prod3_h">Walk-In</a><a href="#products" data-i18n="prod6_h">Custom OEM</a></div>
+<div class="ftr-col"><h4 data-i18n="ftr_comp">Company</h4><a href="#about" data-i18n="nav_about">About Us</a><a href="#certs" data-i18n="nav_certs">Certifications</a><a href="#mfg" data-i18n="nav_mfg">Manufacturing</a><a href="/news.html" data-i18n="nav_news">News</a><a href="#clients" data-i18n="client_eyebrow">Clients</a></div>
+<div class="ftr-col"><h4 data-i18n="ftr_contact">Contact</h4><a href="#contact" data-i18n="nav_quote">Get Quote</a><a href="mailto:sales@dolephi-factory.com" data-i18n="contact_email">Email Us</a><a href="#">WhatsApp</a><a href="#">LinkedIn</a></div>
+</div>
+<div class="ftr-bottom"><span data-i18n="ftr_copy">(c) 2026 Dolephi Sanitary Ware Co., Ltd. All rights reserved.</span><span data-i18n="contact_addr_v">Foshan, Guangdong, China</span></div>
+</div>
+</footer>
+
+<script src="i18n.js"></script>
+<script src="i18n-extra.js"></script>
+<script>
+function renderB2B(){
+var g=document.getElementById('b2bGrid');
+var cur=I18N[currentLang];
+for(var i=1;i<=8;i++){
+var pid='bpain'+i+'_h',ps='bpain'+i+'_s_h',pp='bpain'+i+'_p',psp='bpain'+i+'_s_p';
+g.innerHTML+='<div class="b2b-card reveal"><div class="b2b-pain"><div class="lbl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 15h8M9 9h.01M15 9h.01"/></svg><span>'+cur.bpain_pain+'</span></div><h3>'+cur[pid]+'</h3><p>'+cur[pp]+'</p></div><div class="b2b-sol"><div class="lbl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg><span>'+cur.bpain_sol+'</span></div><h3>'+cur[ps]+'</h3><p>'+cur[psp]+'</p></div></div>';
+}
+setTimeout(rebindReveal,100);
+}
+
+function rebindReveal(){
+document.querySelectorAll('.reveal:not(.seen)').forEach(function(el){
+if(!el._observed){el._observed=true;io.observe(el);}
+});
+}
+
+var currentLang='en';
+function setLang(lang){
+currentLang=lang;
+var d=I18N[lang];
+document.documentElement.lang=lang;
+if(lang==='ar'||lang==='he'||lang==='fa')document.documentElement.dir='rtl';else document.documentElement.dir='ltr';
+document.querySelectorAll('[data-i18n]').forEach(function(el){
+var k=el.getAttribute('data-i18n');
+if(d[k])el.textContent=d[k];
+});
+document.querySelectorAll('[data-i18n-html]').forEach(function(el){
+var k=el.getAttribute('data-i18n-html');
+if(d[k])el.innerHTML=d[k];
+});
+var ph=d['form_ph'];
+if(ph)document.getElementById('formMsg').placeholder=ph;
+document.getElementById('langLabel').textContent=lang.toUpperCase();
+document.querySelectorAll('.lang-item').forEach(function(li){li.classList.remove('active')});
+var act=document.querySelector('.lang-item[onclick="setLang(\''+lang+'\')"]');
+if(act)act.classList.add('active');
+document.getElementById('langMenu').classList.remove('open');
+document.getElementById('b2bGrid').innerHTML='';
+renderB2B();
+setTimeout(rebindReveal,200);
+var h1el=document.querySelector('.hero h1');
+if(h1el && !h1el.getAttribute('data-i18n-html')){h1el.setAttribute('data-i18n-html','hero_h1');}
+}
+
+function toggleLang(e){e.stopPropagation();document.getElementById('langMenu').classList.toggle('open')}
+document.addEventListener('click',function(){document.getElementById('langMenu').classList.remove('open')});
+
+// Mobile menu
+document.getElementById('burger').addEventListener('click',function(){document.getElementById('nav').classList.toggle('open')});
+document.querySelectorAll('#nav a').forEach(function(a){a.addEventListener('click',function(){document.getElementById('nav').classList.remove('open')})});
+
+// Reveal on scroll
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');e.target.classList.add('seen');}})},{threshold:.1});
+document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);el._observed=true});
+
+// Form submit
+function submitForm(e){
+e.preventDefault();
+var f=e.target;
+var btn=f.querySelector('button[type=submit]');
+var d=I18N[currentLang];
+btn.textContent=d.form_sending;btn.disabled=true;
+setTimeout(function(){
+f.reset();
+btn.textContent=d.form_sent;
+btn.style.background='var(--green)';
+setTimeout(function(){btn.textContent=d.form_submit;btn.disabled=false;btn.style.background=''},3000);
+},800);
+return false;
+}
+
+renderB2B();
+
+// Homepage news preview
+var HOME_NEWS=[
+{title:"Dolephi Launches New Premium Walk-In Enclosure Line with Easy-Clean Nano-Coating",date:"2026-06-28",category:"Product Launch",excerpt:"Our new walk-in enclosure series features hydrophobic nano-coating glass, reducing cleaning time by 80%.",file:"content/news/2026-06-28-walk-in-nano-coating-launch.md"},
+{title:"Dolephi Factory Expansion: New 15,000 m2 Production Facility Now Operational",date:"2026-06-15",category:"Company News",excerpt:"Our expanded facility increases annual capacity to 300,000+ units, with automated quality inspection.",file:"content/news/2026-06-15-factory-expansion.md"}
+];
+function renderHomeNews(){
+var g=document.getElementById('homeNewsGrid');
+if(!g)return;
+var m=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+function fmt(d){var dt=new Date(d);return m[dt.getMonth()]+' '+dt.getDate()+', '+dt.getFullYear()}
+HOME_NEWS.forEach(function(n){
+var cc=n.category.toLowerCase().indexOf('product')>=0?'product':'company';
+var bg=cc==='product'?'var(--green-l)':'var(--blue-l)';
+var cl=cc==='product'?'var(--green)':'var(--blue)';
+var html='<a href="/news.html" style="border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#fff;transition:box-shadow .2s,transform .2s;display:block">';
+html+='<div style="aspect-ratio:16/9;background:linear-gradient(135deg,var(--blue-l),#D4ECDB);display:flex;align-items:center;justify-content:center">';
+html+='<svg viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="1" style="width:40%;height:40%;opacity:.3"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 12h18M12 3v18"/></svg></div>';
+html+='<div style="padding:22px">';
+html+='<span style="display:inline-block;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;padding:3px 10px;border-radius:4px;margin-bottom:10px;background:'+bg+';color:'+cl+'">'+n.category+'</span>';
+html+='<h3 style="font-size:15px;font-weight:600;line-height:1.35;margin-bottom:8px;color:var(--steel)">'+n.title+'</h3>';
+html+='<p style="font-size:13px;color:var(--gray);line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">'+n.excerpt+'</p>';
+html+='<div style="font-size:12px;color:var(--gray);margin-top:10px;font-weight:500">'+fmt(n.date)+'</div>';
+html+='</div></a>';
+g.innerHTML+=html;
+});
+}
+renderHomeNews();
+
+// Anti-clone protection
+(function(){
+// Disable right-click context menu
+document.addEventListener('contextmenu',function(e){
+if(!e.target.closest('input,textarea,select')){e.preventDefault();return false}
+});
+// Disable common developer shortcuts (F12, Ctrl+Shift+I, Ctrl+U, Ctrl+Shift+C, Ctrl+Shift+J)
+document.addEventListener('keydown',function(e){
+if(e.keyCode===123){e.preventDefault();return false}
+if(e.ctrlKey&&e.shiftKey&&(e.keyCode===73||e.keyCode===67||e.keyCode===74)){e.preventDefault();return false}
+if(e.ctrlKey&&e.keyCode===85){e.preventDefault();return false}
+});
+// Disable text selection on non-form elements
+document.addEventListener('selectstart',function(e){
+if(!e.target.closest('input,textarea,select')){e.preventDefault();return false}
+});
+// Disable drag
+document.addEventListener('dragstart',function(e){e.preventDefault();return false});
+})();
+</script>
+</body>
+</html>
