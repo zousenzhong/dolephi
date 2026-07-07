@@ -4,7 +4,7 @@ backend:
   branch: main
   auth_type: oauth
   app_id: Ov23livkmT67Mjb0Ws9L
-  base_url: https://dolephi-oauth.zousenzhong.workers.dev/
+  base_url: https://dolephi-oauth.zousenzhong.workers.dev
 
 media_folder: "content/assets"
 public_folder: "/content/assets"
