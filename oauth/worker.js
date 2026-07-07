@@ -108,34 +108,30 @@ export default {
 
       // 成功获取 token，传回 CMS
       const cmsUrl = (env.CMS_URL || 'https://dolephi.zousenzhong.workers.dev/admin/').replace(/\/$/, '') + '/';
-      const cmsOrigin = new URL(cmsUrl).origin; // postMessage 只需要 origin
       const token = tokenData.access_token;
-      // Decap CMS popup 模式期望收到 { token: '...' } 对象
-      const tokenPayload = JSON.stringify({ token });
+
+      // Decap CMS 期望的 postMessage 格式是特定字符串：
+      // "authorization:github:success:{\"token\":\"xxx\",\"provider\":\"github\"}"
+      const authMsg = 'authorization:github:success:' + JSON.stringify({ token, provider: 'github' });
+      // 转义防止 XSS
+      const safeAuthMsg = authMsg.replace(/</g, '\\u003c').replace(/>/g, '\\u003e').replace(/'/g, "\\'");
       const safeCmsUrl = cmsUrl.replace(/'/g, "\\'");
-      const safeCmsOrigin = cmsOrigin.replace(/'/g, "\\'");
-      const safeTokenPayload = tokenPayload.replace(/</g, '\\u003c').replace(/>/g, '\\u003e');
-      const safeToken = token.replace(/'/g, "\\'");
 
       const html =
-        '<!DOCTYPE html><html><head><meta charset="utf-8"><style>body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;display:flex;align-items:center;justify-content:center;height:100vh;margin:0;background:#E6F4EA;color:#256B43;flex-direction:column}</style></head><body><p>Completing login...</p><script>' +
-        // 兼容性处理：确保 window.location 跳转兜底一定会执行
-        `var cmsUrl='${safeCmsUrl}';` +
-        `var cmsOrigin='${safeCmsOrigin}';` +
-        // Popup 模式：通过 postMessage 把 token 传回 CMS 父窗口
+        '<!DOCTYPE html><html><head><meta charset="utf-8"><style>' +
+        'body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;display:flex;align-items:center;justify-content:center;height:100vh;margin:0;background:#E6F4EA;color:#256B43;flex-direction:column;gap:8px}' +
+        'p{margin:0;font-size:16px}.dot{width:8px;height:8px;background:#3D8B5C;border-radius:50%;animation:p 1s infinite}@keyframes p{0%,100%{opacity:.3}50%{opacity:1}}' +
+        '</style></head><body><div class="dot"></div><p>Completing login...</p><script>' +
+        // Popup 模式：用 Decap CMS 期望的字符串格式发送 token
         `try{` +
         `  if(window.opener && window.opener !== window){` +
-        `    window.opener.postMessage(${safeTokenPayload}, cmsOrigin);` +
-        `    window.opener.focus();` +
-        `    window.close();` +
+        `    window.opener.postMessage('${safeAuthMsg}', '*');` +
+        `    setTimeout(function(){window.close();}, 200);` +
+        `  } else {` +
+        // 当前窗口模式：通过 URL hash 跳回 CMS
+        `    window.location.replace('${safeCmsUrl}#access_token=${token}');` +
         `  }` +
-        `}catch(e){console.error('postMessage failed', e);}` +
-        // 当前窗口模式：把 token 放进 URL hash 后跳回 CMS
-        `try{` +
-        `  window.location.replace(cmsUrl + '#access_token=${safeToken}');` +
-        `}catch(e){console.error('redirect failed', e);}` +
-        // 最终兜底：无论前面是否成功，300ms 后强制跳转
-        `setTimeout(function(){window.location.href = cmsUrl;}, 300);` +
+        `}catch(e){console.error('postMessage failed', e);window.location.href='${safeCmsUrl}';}` +
         '</script></body></html>';
 
       return new Response(html, {
