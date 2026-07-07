@@ -1,9 +1,10 @@
 backend:
   name: github
-  repo: your-github-username/dolephi-website
+  repo: zousenzhong/dolephi
   branch: main
   auth_type: oauth
-  app_id: your-oauth-app-id
+  app_id: Ov23livkmT67Mjb0Ws9L
+  base_url: https://dolephi.zousenzhong.workers.dev/
 
 media_folder: "content/assets"
 public_folder: "/content/assets"
