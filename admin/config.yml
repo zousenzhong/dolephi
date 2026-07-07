@@ -2,44 +2,4 @@ backend:
   name: github
   repo: zousenzhong/dolephi
   branch: main
-  auth_type: oauth
-  app_id: Ov23livkmT67Mjb0Ws9L
   base_url: https://dolephi-oauth.zousenzhong.workers.dev
-
-media_folder: "content/assets"
-public_folder: "/content/assets"
-
-collections:
-  - name: "news"
-    label: "News & Updates"
-    label_singular: "News Article"
-    folder: "content/news"
-    create: true
-    delete: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    summary: "{{title}} ({{date}})"
-    sortable_fields: ['date', 'title']
-    fields:
-      - { name: "title", label: "Title", widget: "string", hint: "Article headline shown in list and detail page" }
-      - { name: "date", label: "Publish Date", widget: "datetime" }
-      - { name: "category", label: "Category", widget: "select", options: ["Company News", "Product Launch", "Industry Insight", "Trade Show", "Certification"], default: "Company News" }
-      - { name: "excerpt", label: "Excerpt", widget: "text", hint: "Short summary shown in news list (max 200 chars)" }
-      - { name: "cover_image", label: "Cover Image", widget: "image", required: false, hint: "Optional hero image for the article" }
-      - { name: "featured", label: "Featured on Homepage", widget: "boolean", default: false, hint: "Show this article in the homepage news section" }
-      - { name: "body", label: "Article Content", widget: "markdown", hint: "Write your article in Markdown format" }
-
-  - name: "settings"
-    label: "Site Settings"
-    delete: false
-    editor:
-      preview: false
-    files:
-      - name: "general"
-        label: "General Settings"
-        file: "content/settings/general.json"
-        description: "Site-wide configuration"
-        fields:
-          - { name: "site_name", label: "Site Name", widget: "string", default: "Dolephi" }
-          - { name: "contact_email", label: "Contact Email", widget: "string", default: "sales@dolephi-factory.com" }
-          - { name: "whatsapp", label: "WhatsApp Number", widget: "string", default: "+86 138 0000 0000" }
-          - { name: "news_per_page", label: "News Per Page", widget: "number", default: 6, min: 3, max: 12 }
