@@ -106,25 +106,43 @@ export default {
         );
       }
 
-      // 成功获取 token，通过 postMessage 传回 CMS
-      const cmsUrl = env.CMS_URL || 'https://dolephi.pages.dev/admin/';
-      // Decap CMS 期望收到 { token: '...' } 对象，而不是字符串
-      const tokenPayload = JSON.stringify({ token: tokenData.access_token });
+      // 成功获取 token，传回 CMS
+      const cmsUrl = (env.CMS_URL || 'https://dolephi.zousenzhong.workers.dev/admin/').replace(/\/$/, '') + '/';
+      const cmsOrigin = new URL(cmsUrl).origin; // postMessage 只需要 origin
+      const token = tokenData.access_token;
+      // Decap CMS popup 模式期望收到 { token: '...' } 对象
+      const tokenPayload = JSON.stringify({ token });
       const safeCmsUrl = cmsUrl.replace(/'/g, "\\'");
+      const safeCmsOrigin = cmsOrigin.replace(/'/g, "\\'");
       const safeTokenPayload = tokenPayload.replace(/</g, '\\u003c').replace(/>/g, '\\u003e');
+      const safeToken = token.replace(/'/g, "\\'");
 
       const html =
-        HTML_PREFIX +
+        '<!DOCTYPE html><html><head><meta charset="utf-8"><style>body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;display:flex;align-items:center;justify-content:center;height:100vh;margin:0;background:#E6F4EA;color:#256B43;flex-direction:column}</style></head><body><p>Completing login...</p><script>' +
+        // 兼容性处理：确保 window.location 跳转兜底一定会执行
+        `var cmsUrl='${safeCmsUrl}';` +
+        `var cmsOrigin='${safeCmsOrigin}';` +
         // Popup 模式：通过 postMessage 把 token 传回 CMS 父窗口
-        `if(window.opener){` +
-        `try{window.opener.postMessage(${safeTokenPayload}, '${safeCmsUrl}');window.opener.focus();}catch(e){}` +
-        `}` +
-        // 兜底：当前窗口模式直接跳回 CMS（Decap CMS 通常用 popup，此条防止白屏）
-        `setTimeout(function(){window.location.href='${safeCmsUrl}';}, 100);` +
+        `try{` +
+        `  if(window.opener && window.opener !== window){` +
+        `    window.opener.postMessage(${safeTokenPayload}, cmsOrigin);` +
+        `    window.opener.focus();` +
+        `    window.close();` +
+        `  }` +
+        `}catch(e){console.error('postMessage failed', e);}` +
+        // 当前窗口模式：把 token 放进 URL hash 后跳回 CMS
+        `try{` +
+        `  window.location.replace(cmsUrl + '#access_token=${safeToken}');` +
+        `}catch(e){console.error('redirect failed', e);}` +
+        // 最终兜底：无论前面是否成功，300ms 后强制跳转
+        `setTimeout(function(){window.location.href = cmsUrl;}, 300);` +
         '</script></body></html>';
 
       return new Response(html, {
-        headers: { 'Content-Type': 'text/html; charset=utf-8' },
+        headers: {
+          'Content-Type': 'text/html; charset=utf-8',
+          'Cache-Control': 'no-store, no-cache, must-revalidate',
+        },
       });
     }
 
