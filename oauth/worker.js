@@ -115,10 +115,12 @@ export default {
 
       const html =
         HTML_PREFIX +
-        // 先尝试 postMessage（Decap CMS 标准方式）
-        `window.opener.postMessage(${safeTokenPayload}, '${safeCmsUrl}');` +
-        // 兜底：如果 postMessage 失败，直接跳转回 CMS
-        `setTimeout(function(){window.location.href='${safeCmsUrl}';}, 500);` +
+        // Popup 模式：通过 postMessage 把 token 传回 CMS 父窗口
+        `if(window.opener){` +
+        `try{window.opener.postMessage(${safeTokenPayload}, '${safeCmsUrl}');window.opener.focus();}catch(e){}` +
+        `}` +
+        // 兜底：当前窗口模式直接跳回 CMS（Decap CMS 通常用 popup，此条防止白屏）
+        `setTimeout(function(){window.location.href='${safeCmsUrl}';}, 100);` +
         '</script></body></html>';
 
       return new Response(html, {
